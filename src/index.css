@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --color-teal-primary: #0F766E;
+  --color-teal-hover: #115E59;
+  --color-teal-300: #5EEAD4;
+  --color-tarka-teal: #39807E;
+  --color-teal-400: #2DD4BF;
+  --color-teal-500: #14B8A6;
+  --color-off-white: #FCFCFD;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    @apply bg-off-white text-gray-900 text-[14px];
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(15, 118, 110, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 118, 110, 0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .bg-glow-radial {
+    background-image: radial-gradient(circle at top left, rgba(94, 234, 212, 0.20), transparent 50%);
+  }
+}
